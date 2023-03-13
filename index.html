@@ -20,30 +20,79 @@
     <div class="main">
         <section id="inicio">
             <p class="title">Bem vindo ao meu <span class="emphasis">Site!</span></p>
-            <p class="content">
-                Nesse site irei contar tudo sobre a minha <span class="emphasis">pessoa</span>. <br>
-                Minhas <span class="emphasis">habilidades</span> e meus <span class="emphasis">projetos</span>. <br><br>
+            <p class="content hidden">
+                Nesse site irei contar tudo sobre a minha <span class="emphasis">pessoa</span>, <br>
+                minhas <span class="emphasis">habilidades</span> e meus <span class="emphasis">projetos</span>. <br><br>
                 :D
             </p>
         </section>
         <section id="bio">
             <p class="title">Minha <span class="emphasis">História.</span></p>
-            <p class="content">
+            <p class="content hidden">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde possimus quibusdam neque animi, adipisci optio laborum ad dignissimos cum accusamus veniam molestias magnam fugit dolores eius inventore esse reiciendis id.
             </p>
         </section>
         <section id="skills">
-            
+            <p class="title"><span class="emphasis">Skills</span></p>
+            <table class="hidden">
+                <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JS</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="filled">-</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="filled">-</td>
+                </tr>
+                <tr>
+                    <td class="filled">-</td>
+                    <td>-</td>
+                    <td class="filled">-</td>
+                </tr>
+                <tr>
+                    <td class="filled">-</td>
+                    <td class="filled">-</td>
+                    <td class="filled">-</td>
+                </tr>
+                <tr>
+                    <td class="filled">-</td>
+                    <td class="filled">-</td>
+                    <td class="filled">-</td>
+                </tr>
+            </table>
         </section>
         <section id="projects">
-            
+            <p class="title"><span class="emphasis">Projetos</span></p>
+            <p class="content hidden">
+                Site da escola <span class="emphasis">EEEP José de Barcelos</span>.
+            </p>
         </section>
         <section id="contact">
             <p class="title"><span class="emphasis">Contatos</span></p>
-            <p class="content">
+            <p class="content hidden">
                 Email: <span class="emphasis">fabiotelesbezerra@gmail.com</span>
             </p>
         </section>
     </div>
 </body>
 </html>
+
+<script>
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }else{
+                entry.target.classList.remove("show");
+            }
+        })
+    });
+    const hiddingElements = document.querySelectorAll(".hidden");
+    hiddingElements.forEach(el=>{observer.observe(el)});
+</script>

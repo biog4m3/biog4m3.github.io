@@ -13,6 +13,7 @@ body{
     min-height: 100vh;
     overflow: hidden;
     background-color: #000000;
+    color: white;
 }
 .main{
     position: fixed;
@@ -82,8 +83,44 @@ section .emphasis{
     color: var(--color4);
 }
 
+.hidden{
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    filter: blur(0);
+    transform: translateX(0);
+}
+.skill{
+    background-color: var(--color4);
+    text-align: center;
+    width: 30px;
+}
+
+.html{height: 50%;}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
 @media (max-width: 447px){
     .nav {
         justify-content: space-evenly;
     }
+}
+
+table{
+    border-spacing: 40px 4px;
+}
+th{
+    width: 50px;
+}
+td{
+    background-color: #423e42;
+}
+.filled {
+    background-color: #4301bf;
 }
