@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,70 +8,46 @@
     <meta name="description" content="Bem vindo ao mundo de Fabio">
     <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Fabio World</title>
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+    <title>Fabio Teles</title>
 </head>
+
 <body>
-    <div class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#bio">Bio</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contatos</a>
+    <div id="nav" class="nav">
+        <div id="buttons">
+            <a href="#inicio">Inicio</a>
+            <a href="#bio">Bio</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contatos</a>
+        </div>
+        <div id="nav-handle"></div>
     </div>
+
     <div class="main">
         <section id="inicio">
-            <p class="title">Bem vindo ao meu <span class="emphasis">Site!</span></p>
-            <p class="content hidden">
-                Nesse site irei contar tudo sobre a minha <span class="emphasis">pessoa</span>, <br>
-                minhas <span class="emphasis">habilidades</span> e meus <span class="emphasis">projetos</span>. <br><br>
-                :D
-            </p>
         </section>
         <section id="bio">
             <p class="title">Minha <span class="emphasis">História.</span></p>
             <p class="content hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde possimus quibusdam neque animi, adipisci optio laborum ad dignissimos cum accusamus veniam molestias magnam fugit dolores eius inventore esse reiciendis id.
+                Nasci em Fortaleza em 2006, atualmente tenho <span id="idade" class="emphasis"></span> anos.
+                Aprendi a programar aos meus 12 anos, quando eu tinha um sonho de ser desenvolvedor de jogos.
+
             </p>
         </section>
         <section id="skills">
             <p class="title"><span class="emphasis">Skills</span></p>
-            <table class="hidden">
-                <tr>
-                    <th>HTML</th>
-                    <th>CSS</th>
-                    <th>JS</th>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="filled">-</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="filled">-</td>
-                </tr>
-                <tr>
-                    <td class="filled">-</td>
-                    <td>-</td>
-                    <td class="filled">-</td>
-                </tr>
-                <tr>
-                    <td class="filled">-</td>
-                    <td class="filled">-</td>
-                    <td class="filled">-</td>
-                </tr>
-                <tr>
-                    <td class="filled">-</td>
-                    <td class="filled">-</td>
-                    <td class="filled">-</td>
-                </tr>
-            </table>
         </section>
         <section id="projects">
             <p class="title"><span class="emphasis">Projetos</span></p>
             <p class="content hidden">
-                Site da escola <span class="emphasis">EEEP José de Barcelos</span>.
+                Site da escola profissionalizante <span class="emphasis">EEEP José de Barcelos</span> como desenvolvedor
+                backend.
             </p>
         </section>
         <section id="contact">
@@ -83,4 +60,16 @@
 
     <script src="motion.js"></script>
 </body>
+
 </html>
+
+<script>
+    let date = new Date();
+    let idade = date.getFullYear() - 2007;
+    if (date.getMonth() > 7) idade++;
+    document.getElementById("idade").innerHTML = idade;
+
+    document.getElementById("nav-handle").onclick = ()=>{
+        document.getElementById("nav").classList.toggle("nav-opened");
+    }
+</script>
