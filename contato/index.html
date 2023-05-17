@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fabio Teles</title>
+</head>
+
+<body>
+    <nav id="topnav">
+        <a href="/">INICIO</a>
+        <a href="/projetos">PROJETOS</a>
+        <a href="/contato">CONTATO</a>
+        <a href="javascript:void(0);" class="icon" onclick="navToggle()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <h1 id="title">
+            Contato
+        </h1>
+        <section>
+            Físico
+        </section>
+    </main>
+
+</body>
+
+<script>
+    const nav = document.getElementById("topnav");
+
+    function navToggle(){
+        nav.classList.toggle("responsive");
+    }
+</script>
+
+</html>

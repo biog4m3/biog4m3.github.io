@@ -11,7 +11,7 @@
 }
 
 #title {
-    color: rgb(251, 255, 0);
+    color: var(--color8);
     font-size: 6rem;
 
     animation: floatingTitle 5s ease-in-out infinite;
@@ -29,6 +29,8 @@ section{
     color: var(--color6);
     font-size: 1.2rem;
     word-wrap: normal;
+
+    width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -40,9 +42,12 @@ section{
         position: absolute;
         inset: 0 0 0 0;
     }
+    section{
+        font-size: 1.7rem;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     #title{
         font-size: 4rem;
     }

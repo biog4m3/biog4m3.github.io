@@ -1,0 +1,121 @@
+@keyframes floatingTitle {
+    from {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+#title {
+    color: var(--color8);
+    font-size: 6rem;
+
+    animation: floatingTitle 5s ease-in-out infinite;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+section {
+    max-width: 500px;
+    color: var(--color6);
+    font-size: 1.2rem;
+    word-wrap: normal;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+
+    overflow-x: auto;
+}
+
+
+.project {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: var(--color3);
+    border-radius: 3px;
+    margin: 5px;
+}
+
+.project .title {
+    color: var(--color8);
+}
+
+.project .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.project img {
+    max-width: 100px;
+    margin: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        inset: 0 0 0 0;
+        padding: 10%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #title {
+        font-size: 4rem;
+    }
+
+    main {
+        padding: 30% 10%;
+    }
+
+    section {
+        font-size: 1.3rem;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project .content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}

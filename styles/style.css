@@ -6,6 +6,7 @@
     --color5: #530087;
     --color6: #ddd;
     --color7: #333;
+    --color8: #f6d21c;
 }
 
 html {
@@ -48,6 +49,11 @@ html {
     font-size: 17px;
 
     cursor: pointer;
+}
+
+.emphasis{
+    color: var(--color8);
+    text-decoration: none;
 }
 
 #topnav a:hover {
