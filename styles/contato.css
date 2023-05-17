@@ -1,0 +1,62 @@
+@keyframes floatingTitle{
+    from {
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+
+#title {
+    color: var(--color8);
+    font-size: 6rem;
+
+    animation: floatingTitle 5s ease-in-out infinite;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+section{
+    max-width: 500px;
+    color: var(--color6);
+    font-size: 1.2rem;
+    word-wrap: normal;
+
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        inset: 0 0 0 0;
+    }
+    section{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #title{
+        font-size: 4rem;
+    }
+    main{
+        padding: 30% 10%;
+    }
+    section{
+        font-size: 1.3rem;
+        max-width: 90%;
+    }
+}
