@@ -135,4 +135,8 @@ section {
         flex-direction: column;
         align-items: center;
     }
+
+    section{
+        height: 100%;
+    }
 }

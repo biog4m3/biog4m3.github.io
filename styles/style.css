@@ -29,7 +29,7 @@ html {
     position: relative;
     background-color: var(--color3);
     overflow: hidden;
-    
+
     z-index: 1;
 }
 
