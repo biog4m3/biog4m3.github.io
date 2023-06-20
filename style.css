@@ -1,0 +1,184 @@
+:root {
+    --color1: #423e42;
+    --color2: #000000;
+    --color3: #423e42;
+    --color4: #bf01bf;
+    --color5: #530087;
+    --color6: #ddd;
+    --color7: #333;
+    --color8: #f6d21c;
+}
+
+@font-face {
+    font-family: Retro-Gaming;
+    src: url("./Retro\ Gaming.ttf");
+}
+
+html{
+    font-family: Retro-Gaming;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    inset: 0;
+}
+
+header{
+    height: 40px;
+    background-color: var(--color4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+footer{
+    height: 40px;
+    background-color: var(--color7);
+    color: var(--color6);
+    display: flex;
+    align-items: center;
+}
+section{
+    position: relative;
+    background: var(--color5);
+    min-height: 100%;
+    height: fit-content;
+    color: var(--color6);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header>#title{
+    font-size: 100%;
+    margin: 20px;
+    color: var(--color8);
+}
+header>#title:hover{
+    cursor: pointer;
+}
+.navigation{
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-bnt{
+    text-decoration: none;
+    color: var(--color8);
+    font-weight: 600;
+    position: relative;
+    margin: 5px;
+}
+.nav-bnt:after{
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+
+    transition: all 0.2s;
+
+    background-color: var(--color8);
+}
+.nav-bnt:hover::after{
+    width: 100%;
+}
+
+#open-nav{
+    display: none;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    background-color: var(--color3);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--color8);
+}
+
+.project {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: var(--color3);
+    border-radius: 10px;
+    margin: 5px;
+
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
+}
+
+.project .title {
+    color: var(--color8);
+}
+
+.project .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.project h6 {
+    margin: 10px;
+}
+
+.project img , video {
+    max-width: 100px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:410px) {
+    .navigation{
+        position: fixed;
+        top: 40px;
+        
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: flex-start;
+
+        bottom: 40px;
+        width: 100%;
+        z-index: 1;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+        background-color: #7924ae ;
+    }
+    .navigation-open{
+        display: flex;
+        transform: translateX(0);
+    }
+    .nav-bnt::before {
+        display: inline;
+        content: "- ";
+    }
+    #open-nav{
+        display: block;
+        background-color: wheat;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        background: url("./images/logo.svg");
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.emphasis{
+    color: var(--color8);
+}

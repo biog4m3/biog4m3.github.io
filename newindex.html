@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FT port</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Fabio Teles</h1>
+        <div id="navigation" class="navigation">
+            <a class="nav-bnt" href="#start">Inicio</a>
+            <a class="nav-bnt" href="#languages">Linguagens</a>
+            <a class="nav-bnt" href="#contact">Contatos</a>
+        </div>
+        <div id="open-nav"></div>
+    </header>
+    <main id="main">
+        <section id="start">
+            <p>Meu nome é <span class="emphasis">Fabio</span>. Nasci em 2006, em Fortaleza. Minha jornada com a
+                programação começou aos <span class="emphasis"> 14 anos </span> com criação de jogos. Hoje em dia estou
+                focado em backend e participo em projetos na área que envolvem o funcionamento da aplicaçao.</p>
+        </section>
+        <section id="languages">
+            Linguagens que eu conheço:
+            <span class="emphasis">Java;</span>
+            <span class="emphasis">javascript;</span>
+            <span class="emphasis">HTML;</span>
+            <span class="emphasis">CSS;</span>
+            <span class="emphasis">PHP;</span>
+            <span class="emphasis">C#;</span>
+        </section>
+        <section id="projects">
+            <div class="project">
+                <h3 class="title">
+                    HOMEWARE
+                </h3>
+                <div class="content">
+                    <img src="./images/homeware.png" alt="">
+                    <h6>
+                        Um jogo arcade que envolve arrastar o dedo na tela na direção
+                        da seta, enquanto é nescessário alimentar um gato.
+                        Foi criado com o objetivo de mostrar a vida de alguém que trabalha no
+                        home office tendo que, enquanto trabalha, cuidar dos afazeres caseiros.
+                        <br>
+                    </h6>
+                    <a href="https://www.amazon.com.br/Homeware-Company-HomeWare/dp/B0B2QJTFG9/ref=sr_1_1"
+                        class="emphasis" style=" font-size: smaller; align-self: flex-end;">Amazon AppStore</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="title">
+                    OpenGL Java
+                </h3>
+                <div class="content">
+                    <video src="./images/opengl.gif" autoplay loop></video>
+                    <h6>
+                        Um motor gráfico programado em java usando a biblioteca gráfica opengl.
+                        Ela possui suporte à modelos em <span class="emphasis">.obj</span>, a iluminação e textura.
+
+                        Foi desenvolvida usando uma biblioteca lwjgl
+                        <br>
+                        <br>
+                        <br>
+                        <span class="emphasis">Em desenvolvimento.</span>
+                    </h6>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+
+        </section>
+    </main>
+    <footer>
+        Criado por Fabio
+    </footer>
+</body>
+
+<script>
+    document.getElementById("navigation").childNodes.forEach(e => {
+        if (e.classList?.contains("nav-bnt")) {
+            e.onclick = () => {
+                if (window.innerWidth < 410) {
+                    document.getElementById("navigation").classList.toggle("navigation-open");
+                }
+            }
+        }
+
+    })
+
+    document.getElementById("open-nav").onclick = () => {
+        document.getElementById("navigation").classList.toggle("navigation-open");
+    }
+    document.getElementById("title").onclick = () => {
+        document.getElementById("main").scrollTo(0, 0);
+    }
+</script>
+
+</html>
